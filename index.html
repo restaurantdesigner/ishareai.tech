@@ -1175,8 +1175,46 @@ body.modal-open {
   opacity: 1;
   transform: translateX(-50%) scale(1);
 }
+.icon-line-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
+.icon-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 120px;
+}
 
+.icon-block img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: none; /* Скрываем линии на мобильных устройствах */
+}
+
+@media (min-width: 768px) {
+  .icon-line-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .line {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #ccc;
+    align-self: center;
+  }
+}
 
 
   </style>
