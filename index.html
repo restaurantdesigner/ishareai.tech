@@ -1154,73 +1154,177 @@ body.modal-open {
   
 
 
-#sec4 {
-  position: relative;
-  overflow: hidden;
-}
-
-.flying-avatar {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) scale(0.8);
-  width: 220px;
-  max-width: 90vw;
-  opacity: 0;
-  z-index: 1;
-  transition: transform 1.2s ease-out, opacity 1.2s ease-out;
-}
-
-.flying-avatar.visible {
-  opacity: 1;
-  transform: translateX(-50%) scale(1);
-}
-.icon-line-wrapper {
+.icon-line-wrapper.tech-stack {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 20px 40px;
+  padding: 40px 20px 30px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .icon-block {
+  width: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 120px;
 }
 
 .icon-block img {
-  width: 60px;
+  width: 40px;
   height: auto;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.icon-block span {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.65rem;
+  line-height: 1.2;
+  color: #111;
+  text-transform: uppercase;
 }
 
 .line {
-  display: none; /* Скрываем линии на мобильных устройствах */
+  display: none;
 }
 
 @media (min-width: 768px) {
-  .icon-line-wrapper {
+  .icon-line-wrapper.tech-stack {
     flex-wrap: nowrap;
+    gap: 20px;
   }
+
+  .icon-block {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.6s ease-in-out;
+}
+
+.icon-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
   .line {
     display: block;
-    width: 40px;
+    width: 30px;
     height: 2px;
-    background-color: #ccc;
+    background-color: #999;
     align-self: center;
   }
 }
 
+.icon-block {
+  opacity: 1 !important;
+  transform: none !important;
+}
 
 
 
+@media (max-width: 767px) {
+  .tech-stack-spacer {
+    min-height: 30vh;
+    margin-top: 10vh;
+  }
+
+  .tech-stack-spacer .spacer-title {
+    margin-bottom: 5px;
+  }
+
+  .tech-stack-spacer .icon-line-wrapper {
+    padding-top: 10px;
+    margin-top: 0;
+  }
+}
+
+/* Для всех (десктоп + мобайл) */
+.tech-stack-spacer .spacer-title {
+  margin-bottom: 10px;
+  font-size: 1.2rem; /* можно подправить визуально */
+}
+
+.tech-stack-spacer .icon-line-wrapper {
+  margin-top: 0;
+  padding-top: 5px;
+}
+
+#sec3 {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+#seekbeak-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#seekbeak-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#seekbeak-cover {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65); /* можно сделать еще чуть прозрачнее */
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#seekbeak-cover .text-wrapper2 {
+  max-width: 90vw;
+}
+
+@media (max-width: 767px) {
+  #seekbeak-cover .hero-title {
+    font-size: 1.6rem;
+  }
+
+  #seekbeak-cover .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+.tech-stack-spacer {
+  scroll-margin-top: 100px; /* помогает при якорной навигации */
+  padding-top: 80px;
+}
+
+    @media (max-width: 767px) {
+  .tech-stack-spacer {
+    padding-top: 80px;
+    min-height: 35vh;
+  }
+}
+ 
+     
+     
 
 
+  
 
   </style>
 
