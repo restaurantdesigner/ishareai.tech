@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ISHAREAI – Intelligent Avatars for Branding, Sales & Customer Engagement </title>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+
+  <!-- favicon для PNG -->
+<link rel="icon" type="image/png" href="img/letra-i.png">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <style>
+
+/* ✅ ОБЩИЙ стиль (для десктопа и всех) */
+.footnote {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.6rem;
+  opacity: 0.65;
+  line-height: 1.5;
+  max-width: 85vw;
+  margin-top: 1rem;
+  white-space: normal;
+  word-break: break-word;
+}
+
+
+
+
+/* ✅ ТОЛЬКО для мобильных */
+@media (max-width: 767px) {
+  .footnote {
+    font-size: 0.45rem;
+    max-width: 90vw;
+  }
+}
+
+.footnote a {
+  color: #66ccff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+
+section#hero {
+  overflow: visible;
+}
+
+
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Staatliches', sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    section {
+      height: 100vh;
+      position: relative;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      scroll-snap-align: start;
+    }
+    body {
+      scroll-snap-type: y mandatory;
+    }
+
+    body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+    .spacer {
+      height: 20vh;
+    }
+    .video-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+    .content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10vh;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+
+    .logo {
+      width: 40vw;
+      max-width: 300px;
+    }
+   .cta-button {
+  margin-top: 20px;
+  padding: 12px 32px;
+  font-size: 1.3rem;
+  font-family: 'Staatliches', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: black;
+}
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 40px 20px;
+      background: #f8cfff;
+    }
+    .gallery img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .form-section {
+      background: transparent;
+      color: #222;
+      padding: 00px 00px;
+      text-align: left;
+    }
+   form input, form textarea {
+  width: 100%;
+  padding: 0.75em 1em;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-bottom: 0.5em;
+  box-sizing: border-box;
+}
+
+form input:hover,
+form textarea:hover {
+  border-color: #ccc;
+  background: #f1f1f1;
+}
+
+    form button {
+      background: black;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    #lang-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: white;
+      color: black;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+header, footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  top: 0;
+  justify-content: space-between;
+}
+
+header img {
+  height: 80px;
+}
+
+.lang-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+  direction: ltr;
+}
+
+.lang-select button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.lang-select button.active {
+  opacity: 1;
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+
+   
+  .button-block {
+    margin-bottom: 6vh;
+  }
+
+.text-wrapper {
+  margin-top: 12vh;     /* 👈 Добавляем это */
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: left;
+  max-width: 90vw;       /* 👈 Можно добавить, чтобы было как inline */
+}
+
+
+.text-wrapper2 {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: left;
+  max-width: 90vw;
+  margin-top: 30vh;
+}
+
+    hero-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: aqua;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.3rem;
+    color: aqua;
+  }
+}
+.fade {
+  opacity: 1;
+  transition: opacity 0.9s ease-in-out;
+}
+.fade-out {
+  opacity: 0;
+}
+
+   .site-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5vw;
+}
+
+/* На десктопе — чуть меньше отступ */
+@media (min-width: 768px) {
+  .site-title-wrapper {
+    margin-left: 40px;
+  }
+}
+
+.site-title {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 1.3rem;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.site-subtitle {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 0.6rem;
+  color: rgb(58, 193, 255);
+  opacity: 0.7;
+  margin-top: 0.5px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+
+
+
+
+
+.logo-spacer {
+  width: 100%;
+  height: 15vh; /* такой же как .logo-container в #hero */
+  margin-bottom: 30px; /* как у .logo-container */
+}
+
+
+
+
+#sec2 .content {
+  align-items: flex-start;
+  text-align: left;
+}
+
+#sec2 .text-wrapper {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  text-align: left;
+}
+
+body {
+  font-family: 'Staatliches', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+
+h1, h2, .hero-title {
+  font-family: 'Staatliches', sans-serif;
+}
+
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: 2rem !important; /* Принудительно увеличим */
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-wrapper2 {
+    margin-left: 10vw;  /* было 5vw, можно 6vw–10vw */
+    margin-right: 5vw;
+    max-width: 60vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-wrapper2 {
+    margin-left: 40px;
+    margin-right: 5vw;
+    max-width: 700px;
+  }
+}
+
+
+
+
+
+
+
+
+#close-panel {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#panel-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#panel-backdrop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.side-content {
+  margin-top: 60px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#side-panel {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  color: black;
+  z-index: 1001;
+  transition: right 0.4s ease;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+#side-panel.open {
+  right: 0;
+}
+
+/* 👇 Мобильный: 90% ширины */
+@media (max-width: 767px) {
+  #side-panel {
+    width: 90%;
+    right: -90%;
+  }
+
+  #side-panel.open {
+    right: 0;
+  }
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f9f9f9;
+  border-top: 1px solid #ccc;
+  padding: 20px;
+  font-size: 0.9rem;
+  z-index: 9999;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+.cookie-banner.show {
+  transform: translateY(0%);
+}
+
+.cookie-content {
+  max-width: 960px;
+  margin: 0 auto;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cookie-content a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+.cookie-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cookie-buttons button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+}
+
+#accept-cookies {
+  background: black;
+  color: white;
+}
+
+#config-cookies {
+  background: #eee;
+  color: #333;
+}
+
+#reject-cookies {
+  background: transparent;
+  color: #999;
+  border: 1px solid #ccc;
+}
+
+/* Modal */
+#cookie-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  z-index: 10001;
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+#cookie-modal.show {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#cookie-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 10000;
+  display: none;
+}
+
+#cookie-overlay.show {
+  display: block;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  padding: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-scroll {
+  overflow-y: auto;
+  max-height: 60vh;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.modal a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.modal a:hover {
+  text-decoration: underline;
+}
+
+.cookie-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.cookie-modal.show {
+  display: flex;
+}
+
+.cookie-modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cookie-modal-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.modal-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.cookie-option {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.3;
+}
+
+.cookie-option input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-btn, .cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.save-btn {
+  background-color: black;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.spacer {
+  height: 20vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacer-inner {
+  width: 100%;
+  max-width: 1000px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.spacer-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-family: 'Staatliches', sans-serif;
+  letter-spacing: 1px;
+}
+
+.icon-line-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.icon-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 90px;
+}
+
+.icon-block img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.icon-block span {
+  font-size: 0.7rem;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background: #999;
+  min-width: 20px;
+  max-width: 100px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .line {
+    max-width: 30px;
+  }
+
+  .icon-block {
+    width: 70px;
+  }
+
+  .icon-block img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .icon-block span {
+    font-size: 0.65rem;
+  }
+ }
+
+
+.modal-oferta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.video-bg,
+.overlay {
+  pointer-events: none;
+}
+
+
+
+
+.modal-content {
+  background: white;
+  color: #222;
+  padding: 30px 20px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-family: 'Staatliches', sans-serif;
+  text-transform: uppercase;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.footnote-block {
+  margin-top: 10vh;    /*   расстояние от кнопки */
+  margin-bottom: 5%;   /* расстояние до низа экрана */
+}
+
+.footnote + .footnote {
+  margin-top: 0.1rem;   /* расстояние между строками */
+}
+
+.custom-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  user-select: none;
+  position: relative;
+  padding-left: 30px;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox .checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 2px solid #999;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #111;
+  border-color: #111;
+}
+
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.custom-checkbox .checkmark::after {
+  left: 6px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.02rem;
+  grid-template-columns: 1fr; /* по умолчанию — 1 колонка */
+}
+
+@media (min-width: 600px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr); /* планшеты — 2 колонки */
+  }
+}
+
+@media (min-width: 960px) {
+  .form-grid {
+    grid-template-columns: repeat(3, 1fr); /* десктоп — 3 колонки */
+  }
+
+  .form-grid.four-cols {
+    grid-template-columns: repeat(4, 1fr); /* если нужно 4 в ряд */
+  }
+}
+
+.form-grid label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.3em; /* было 0.5em или 1em — уменьшаем */
+  padding: 0.5em 0.75em; /* можно немного сократить внутренний отступ */
+  padding: 0.75em 1em;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.form-grid label:hover {
+  border-color: #ccc;
+  background: #f1f1f1;
+}
+
+body.modal-open {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Блокировка фоновой прокрутки */
+body.modal-open {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Затемнение заднего плана */
+#panel-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#panel-backdrop.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Панель */
+#side-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 90%;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  z-index: 1001;
+  transition: right 0.4s ease;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;progress-container
+  overflow: hidden;
+}
+
+#side-panel.open {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  #side-panel {
+    width: 50%;
+    right: -50%;
+  }
+
+  #side-panel.open {
+    right: 0;
+  }
+}
+
+/* Контент внутри панели */
+.side-content {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 20px 20px 40px 20px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  min-height: 0;
+  position: relative; /* ← это нужно для sticky-работы */
+   padding-top: 0; /* было 20px */
+}
+
+
+
+
+/* Кнопка закрытия */
+#close-panel {
+  background: none;
+  border: none;
+  font-size: 24px;
+  align-self: flex-end;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.form-intro h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+
+
+
+
+ {
+  height: 10px;
+  widt.progress-barh: 0%;
+  background: linear-gradient(90deg, #66ccff, #f35ca3);
+  transition: width 0.3s ease;
+}
+
+
+
+
+.form-wrapper {
+  padding-top: 120px;
+}
+.sticky-header {
+  position: sticky;
+  margin-top: 0 !important;
+    top: 0;
+  background: white;
+  z-index: 10;
+  padding: 0px 0px;
+  box-shadow: none; /* убираем тень */
+  
+}
+
+
+
+
+
+
+.progress-wrapper {
+  margin-bottom: 20px;
+}
+
+.progress-text {
+  font-size: 0.75rem;
+  text-align: center;
+  color: #555;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 6px; /* 👈 отступ от текста до полосы */
+}
+
+.progress-container {
+  position: relative;
+  height: 10px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #66ccff, #f35ca3);
+  transition: width 0.3s ease;
+}
+@media (max-width: 767px) {
+  .progress-text {
+    font-size: 0.65rem;
+    margin-bottom: 4px;
+  }
+  .progress-container {
+    height: 8px;
+  }
+}
+
+
+
+  </style>
+
+ 
+
+  <header>
+ <div class="site-title-wrapper">
+  <div class="site-title">ISHAREAI</div>
+  <div class="site-subtitle">AI Communication & Smart Branding</div>
+</div>
+
+  <div class="lang-select">
+    <button onclick="setLang('es')" id="btn-es">ES</button>
+    <button onclick="setLang('en')" id="btn-en">EN</button>
+    <button onclick="setLang('ar')" id="btn-ar">AR</button>
+  </div>
+</header>
+
+
+
+
+
+
+<body>
+
+<script async src="https://cdn.rvtr.ai/projects/683849c7e1960ae001000174/683849c7e1960ae001000176.js"></script>
+
+
+
+<!-- Cookie Settings Modal -->
+<div id="cookie-modal" class="cookie-modal">
+  <div class="cookie-modal-content">
+    <h2>Cookie Preferences</h2>
+    <p class="modal-desc">
+      Select which types of cookies you want to allow. You can update these preferences at any time.
+    </p>
+
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" checked disabled />
+        <strong>Essential Cookies</strong><br>
+        These cookies are necessary for the website to function and cannot be disabled.
+      </label>
+    </div>
+
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" id="analytics-cookies" />
+        <strong>Analytics Cookies</strong><br>
+        Help us understand how visitors interact with our platform to improve performance.
+      </label>
+    </div>
+
+    <div class="cookie-option">
+      <label>
+        <input type="checkbox" id="ads-cookies" />
+        <strong>Marketing Cookies</strong><br>
+        Used to deliver relevant content and measure engagement across platforms.
+      </label>
+    </div>
+
+    <div class="modal-buttons">
+      <button id="save-settings" class="save-btn">Save Preferences</button>
+      <button id="cancel-settings" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
+</div>
+<div id="cookie-overlay"></div>
+
+
+
+
+
+
+
+
+  <div id="lang-toggle">EN</div>
+  <section id="hero">
+    <video class="video-bg" autoplay muted loop playsinline>
+  <source src="img/screen7.mp4" type="video/mp4">
+</video>
+
+    <div class="overlay"></div>
+    <div class="content">
+  <!-- Логотип отдельно, с отступом сверху -->
+  <div class="logo-container" style="
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+    margin-bottom: 30px;
+  ">
+    <img src="img/lg.png" alt="3DNA Logo" class="logo" />
+  </div>
+
+  <!-- Текст и кнопка — НЕ зависят от логотипа -->
+  <div class="text-wrapper" style="
+  margin-left: 5vw;
+  text-align: left;
+  max-width: 90vw;
+  margin-top: 12vh;
+  position: relative; /* обязательно для .footnote */
+">
+  <h1 class="hero-title">
+  AI-POWERED BRANDING, INTERACTIVE AVATARS & IMMERSIVE VISUAL EXPERIENCES
+</h1>
+
+<p class="hero-subtitle">
+  <span id="rotating-text" class="fade">We launch your brand with real-time AI engagement and immersive impact</span>
+</p>
+
+<button class="cta-button open-panel">Try iSHAREAI Now</button>
+
+<div class="footnote-block">
+  <p class="footnote">
+    * ISHAREAI proudly supports non-profit, educational, and humanitarian initiatives.  
+  Ask us about tailored AI avatar solutions for your mission-driven project.
+  </p>
+  <p class="footnote">
+    * Full conversion system (Landing → Chat Avatar → Social Media → Payment) from <strong>$890</strong>.  
+    See details in our <a href="#modal-oferta" class="open-oferta">Public Service Agreement</a>.
+  </p>
+</div>
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+<div class="spacer">
+  <div class="spacer-inner">
+    <h2 class="spacer-title">OUR WORKFLOW</h2>
+    <div class="icon-line-wrapper">
+      <div class="icon-block">
+        <img src="img/icon1.png" alt="AI Branding">
+        <span>AI BRANDING</span>
+      </div>
+      <div class="line"></div>
+      <div class="icon-block">
+        <img src="img/icon2.png" alt="Interaction Design">
+        <span>INTERACTION FLOW</span>
+      </div>
+      <div class="line"></div>
+      <div class="icon-block">
+        <img src="img/icon3.png" alt="System Integration">
+        <span>INTEGRATION</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<section id="sec2">
+  <video class="video-bg" autoplay muted loop playsinline poster="img/fallback8.jpg">
+    <source src="img/screen8.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <!-- Имитация отступа как у логотипа -->
+    <div style="height: 15vh; margin-bottom: 30px;"></div>
+
+    <!-- Текст и кнопка выровнены по левому краю -->
+    <div class="text-wrapper2">
+     <h1 class="hero-title">TAILORED DIGITAL EXPERIENCES</h1>
+<p class="hero-subtitle">
+  <span id="rotating-text-sec2" class="fade">Virtual Environments Powered by AI</span>
+</p>
+<button class="cta-button" onclick="alert('Entering the AI showroom...')">
+  ENTER AI SHOWROOM
+</button>
+
+    </div>
+  </div>
+</section>
+      
+      
+      
+      
+      <div class="spacer">
+  <div class="spacer-inner">
+    <h2 class="spacer-title">OUR WORKFLOW</h2>
+    <div class="icon-line-wrapper">
+      <div class="icon-block">
+        <img src="img/icon1.png" alt="AI Branding">
+        <span>AI BRANDING</span>
+      </div>
+      <div class="line"></div>
+      <div class="icon-block">
+        <img src="img/icon2.png" alt="Interaction Design">
+        <span>INTERACTION FLOW</span>
+      </div>
+      <div class="line"></div>
+      <div class="icon-block">
+        <img src="img/icon3.png" alt="System Integration">
+        <span>INTEGRATION</span>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      
+      <section id="sec3">
+  <video class="video-bg" autoplay muted loop playsinline poster="img/fallback8.jpg">
+    <source src="img/screen8.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <!-- Имитация отступа как у логотипа -->
+    <div style="height: 15vh; margin-bottom: 30px;"></div>
+
+    <!-- Текст и кнопка выровнены по левому краю -->
+    <div class="text-wrapper2">
+     <h1 class="hero-title">TAILORED DIGITAL EXPERIENCES</h1>
+<p class="hero-subtitle">
+  <span id="rotating-text-sec2" class="fade">Virtual Environments Powered by AI</span>
+</p>
+<button class="cta-button" onclick="alert('Entering the AI showroom...')">
+  ENTER AI SHOWROOM
+</button>
+
+    </div>
+  </div>
+</section>
+      
+      
+      
+
+<!-- Политика Cookies — модальное окно -->
+<div id="cookies-policy-modal" class="modal">
+  <div class="modal-content">
+    <h2>Cookie Policy</h2>
+    <div class="modal-scroll">
+      <p>
+        At <strong>ISHAREAI</strong>, we use cookies to enhance your experience, improve our services, and deliver personalized content.<br><br>
+
+        <strong>What are cookies?</strong><br>
+        Cookies are small text files stored on your device when you visit a website. They help remember your preferences, active sessions, and usage patterns to personalize and optimize your interaction with our platform.<br><br>
+
+        <strong>What types of cookies do we use?</strong><br>
+        – <strong>Essential cookies:</strong> Required for core website functionality. These cannot be disabled.<br>
+        – <strong>Analytics cookies:</strong> Help us understand how users interact with the site (e.g., via Google Analytics).<br>
+        – <strong>Marketing cookies:</strong> Enable us to show relevant content and measure performance across channels.<br><br>
+
+        <strong>How can you manage cookies?</strong><br>
+        You can accept or reject cookies using our consent banner or manage your preferences manually. You may also configure your browser to block or automatically delete cookies.<br><br>
+
+        <strong>Changing your preferences</strong><br>
+        You can update your cookie preferences at any time by reopening the cookie settings menu. You can also clear local storage via your browser tools.<br><br>
+
+        For more information, contact us at <a href="mailto:contact@ishareai.tech">contact@ishareai.tech</a>.
+      </p>
+    </div>
+    <div style="text-align: right; margin-top: 15px;">
+      <button id="close-policy-modal" style="padding: 10px 20px;">Close</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="spacer"></div>
+
+<section class="gallery">
+  <img src="https://via.placeholder.com/200x140" alt="Showcase 1">
+  <img src="https://via.placeholder.com/200x140" alt="Showcase 2">
+  <img src="https://via.placeholder.com/200x140" alt="Showcase 3">
+  <img src="https://via.placeholder.com/200x140" alt="Showcase 4">
+</section>
+
+<section class="form-section">
+  <h2>Request Your Custom AI Proposal</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email Address">
+    <input type="tel" placeholder="Phone Number">
+    <textarea placeholder="Tell us about your project or goals"></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+</section>
+
+<div class="footer">
+  <p>📍 Spain · ✉️ <a href="mailto:andrei@ishareai.tech">andrei@ishareai.tech</a> · 🌐 www.ishareai.tech</p>
+</div>
+
+
+<!-- Затемнение фона -->
+<div id="panel-backdrop"></div>
+
+<!-- Выезжающая панель -->
+<div id="side-panel">
+  <button id="close-panel">&times;</button>
+  
+  <div class="side-content">
+  <div class="form-intro">
+
+     <h2>Grow Your Business with Intelligent Human Interfaces</h2>
+       </div>
+
+<p>Today, every serious brand starts with a clear challenge:  
+How do we connect with people — instantly, emotionally, and at scale</p>
+
+<p><strong>ISHAREAI</strong> is a new-generation platform that brings your digital presence to life through intelligent avatars.  
+It simplifies communication, increases conversion, and builds real-time trust</p>
+
+<p>Static websites are silent.  
+Old-school chatbots feel mechanical.  
+ISHAREAI gives your brand a voice — alive, expressive, multilingual, and always available</p>
+
+<h3>Key Features</h3>
+<ul>
+  <li><strong>AI Avatars</strong> — Photoreal digital humans that speak and respond in your tone, in real time</li>
+  <li><strong>Smart Funnels</strong> — From avatar to action, to checkout, without losing your user</li>
+  <li><strong>Hyper Personalization</strong> — Tone, language, content adjust dynamically for each visitor</li>
+  <li><strong>Deep Insights</strong> — Heatmaps and analytics show where attention flows and trust grows</li>
+  <li><strong>Secure Payments</strong> — Stripe, crypto, subscriptions — all integrated, ready to use</li>
+  <li><strong>Plug & Play</strong> — Integrates with your current tech: Shopify, Webflow, custom stacks</li>
+</ul>
+
+<h3>Why Brands Choose ISHAREAI</h3>
+<ul>
+  <li><strong>Up to 60% better conversion</strong> with interactive, human-like onboarding</li>
+  <li><strong>Instant emotional trust</strong> through real voices and facial expressions</li>
+  <li><strong>Works at any scale</strong> — 10 users or 10,000, no extra hires needed</li>
+  <li><strong>Mobile-first, lightning-fast</strong>, and fully brand-consistent</li>
+  <li><strong>No-code setup</strong> — Launch your avatar in minutes</li>
+</ul>
+
+<h3>Our Tech Stack</h3>
+<ul>
+  <li><strong>Frontend</strong> — HTML5, TailwindCSS, Vanilla JS or React</li>
+  <li><strong>Avatars</strong> — Powered by NVIDIA Audio2Face, D-ID, ReadyPlayerMe, or Unreal Engine</li>
+  <li><strong>AI Engine</strong> — GPT-4, Cohere, Mistral APIs</li>
+  <li><strong>Voice</strong> — ElevenLabs, Azure TTS, custom cloning</li>
+  <li><strong>Hosting</strong> — Vercel, Netlify, GitHub Pages</li>
+  <li><strong>Payments</strong> — Stripe, PayPal, Coinbase Commerce</li>
+  <li><strong>Analytics</strong> — Hotjar, Plausible, Segment</li>
+</ul>
+
+<p>ISHAREAI stands at the intersection of AI, identity, and design  
+It transforms how brands speak — and how customers respond</p>
+
+<p><strong>Your interface is now alive  
+Your user is no longer alone  
+ISHAREAI speaks for you</strong></p>
+
+
+<div class="sticky-header">
+  <div class="form-intro">
+    <h2>Get your AI avatar now — let’s build your digital front line.</h2>
+  </div>
+  <div class="progress-wrapper">
+    <div class="progress-text" id="progress-text">0% completed</div>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<<!-- Section 1 -->
+<div class="form-section">
+  <h3>What type of interaction are you looking to enhance with an AI avatar?</h3>
+  <div class="form-grid">
+    <label><input type="checkbox" name="use_case" value="reception"> Virtual Reception / Front Desk</label>
+    <label><input type="checkbox" name="use_case" value="guide"> Interactive Product or Service Guide</label>
+    <label><input type="checkbox" name="use_case" value="booking"> Booking or Reservation Assistant</label>
+    <label><input type="checkbox" name="use_case" value="faq"> AI-based FAQ / Customer Support</label>
+    <label><input type="checkbox" name="use_case" value="presentation"> Brand Presentation or Sales Pitch</label>
+    <label><input type="checkbox" name="use_case" value="education"> Educational or Training Content</label>
+    <label><input type="checkbox" name="use_case" value="ecommerce"> E-commerce Product Concierge</label>
+    <label><input type="checkbox" name="use_case" value="healthcare"> Virtual Health / Wellness Assistant</label>
+    <label><input type="checkbox" name="use_case" value="events"> Event or Expo Avatar Host</label>
+    <label><input type="checkbox" name="use_case" value="custom"> Custom Use Case</label>
+    
+    <label>
+      <input type="checkbox" id="otherUseCaseCheckbox" name="use_case" value="other"> Other
+    </label>
+    <div id="otherUseCaseInputWrapper" style="display:none; margin-top: 10px;">
+      <input type="text" name="use_case_other" placeholder="Describe your custom use case" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Section 2 -->
+<div class="form-section">
+  <h3>When do you need your AI avatar to work for you?</h3>
+  <div class="form-grid">
+    <label><input type="checkbox" name="availability" value="night"> At night (while I'm sleeping)</label>
+    <label><input type="checkbox" name="availability" value="weekends"> On weekends and holidays</label>
+    <label><input type="checkbox" name="availability" value="24_7"> 24/7 – Always available</label>
+    <label><input type="checkbox" name="availability" value="peak"> During peak traffic hours</label>
+    <label><input type="checkbox" name="availability" value="afterhours"> As customer support after business hours</label>
+  </div>
+</div>
+
+
+<!-- Секция 3 -->
+<div class="form-section">
+  <h3>Where will you promote your business?</h3>
+  <div class="form-grid">
+    <label><input type="checkbox" name="ads" value="meta"> Meta Ads (Facebook / Instagram)</label>
+    <label><input type="checkbox" name="ads" value="google"> Google Ads / YouTube</label>
+    <label><input type="checkbox" name="ads" value="email"> Email Marketing</label>
+    <label><input type="checkbox" name="ads" value="organic"> Organic Social Media</label>
+    <label><input type="checkbox" name="ads" value="other"> Other Channels</label>
+  </div>
+</div>
+
+
+      
+      
+      <!-- Секция 4 -->
+  <div class="form-section">
+  <h3>What do you want your AI avatar to do?</h3>
+  <div class="form-grid">
+    <label><input type="checkbox" name="functions" value="guide"> Explain your product or service</label>
+    <label><input type="checkbox" name="functions" value="capture"> Capture leads or collect data</label>
+    <label><input type="checkbox" name="functions" value="support"> Answer FAQs / support visitors</label>
+    <label><input type="checkbox" name="functions" value="convert"> Drive conversions or sales</label>
+    <label><input type="checkbox" name="functions" value="demo"> Give a presentation or pitch</label>
+  </div>
+</div>
+      
+      
+      <!-- Секция 5 -->
+  <div class="form-section">
+  <h3>What language(s) should your avatar speak?</h3>
+  <div class="form-grid">
+    <label><input type="checkbox" name="language" value="english"> English</label>
+    <label><input type="checkbox" name="language" value="spanish"> Spanish</label>
+    <label><input type="checkbox" name="language" value="french"> French</label>
+    <label><input type="checkbox" name="language" value="german"> German</label>
+    <label><input type="checkbox" name="language" value="multilang"> Multilingual</label>
+  </div>
+</div>
+
+
+    
+      
+      <!-- Секция 6 -->
+  <div class="form-section">
+  <h3>Would you like to add any of the following?</h3>
+  <div class="form-grid">
+    <label><input type="checkbox" name="extras" value="booking"> Booking calendar integration</label>
+    <label><input type="checkbox" name="extras" value="payments"> Online payment system</label>
+    <label><input type="checkbox" name="extras" value="chat"> Live chat fallback</label>
+    <label><input type="checkbox" name="extras" value="customdomain"> Custom domain setup</label>
+    <label><input type="checkbox" name="extras" value="other"> Other features</label>
+  </div>
+</div>
+
+      
+      
+    <!-- Секция 7 -->
+  <div class="form-section">
+  <h3>Ready to launch? Let’s build your avatar</h3>
+  <form>
+    <input type="text" name="name" placeholder="Your name">
+    <input type="email" name="email" placeholder="Email address">
+    <input type="tel" name="phone" placeholder="Phone number (optional)">
+    <textarea name="notes" placeholder="Any notes or special requests?"></textarea>
+    <button type="submit">Send My Request</button>
+  </form>
+</div>
+
+      
+
+      
+      S
+      
+      
+      
+      
+<!-- Modal: Public Offer Contract -->
+<div id="modal-oferta" class="modal-oferta" style="display: none;">
+  <div class="modal-content" style="overflow-y: auto; max-height: 90vh; padding: 1rem;">
+    <button id="close-oferta" class="modal-close" style="position: absolute; top: 1rem; right: 1rem;">&times;</button>
+    <h2>Public Offer Contract</h2>
+<p><strong>Version:</strong> 1.0 | <strong>Effective Date:</strong> [dd/mm/yyyy]</p>
+
+<h3>1. Purpose of the Contract</h3>
+<p>This document constitutes a legally binding Public Offer issued by the owner of an automated AI-based digital service (hereinafter, “the Provider”). It defines the conditions for the use of intelligent avatar technologies, voice-driven interfaces, and related modules offered through the ISHAREAI platform.</p>
+<p>By accessing and using any part of the system, the User confirms their acceptance of the terms and legal provisions described herein.</p>
+
+<h3>2. Service Description</h3>
+<ul>
+  <li>The Provider offers intelligent AI-driven virtual agents (avatars) capable of real-time interaction, voice synthesis, and logic-based response flows.</li>
+  <li>These services are designed for use in marketing, customer communication, education, assistance, and other human-machine interface purposes.</li>
+  <li>The system operates via cloud infrastructure and may include frontend widgets, backend APIs, and integration with third-party platforms.</li>
+  <li>Access may be granted under free, trial, beta, or subscription terms, depending on the agreement.</li>
+</ul>
+
+<h3>3. Functional Integrity</h3>
+<ul>
+  <li>The Provider guarantees that all core systems have been tested and maintained under standard operational conditions.</li>
+  <li>Any issues caused by third-party integrations (such as hosting, TTS/LLM APIs, or browser incompatibilities) are beyond the Provider’s scope of liability.</li>
+  <li>Continuous access is not guaranteed in the event of force majeure, misuse, or legal restrictions.</li>
+</ul>
+
+<h3>4. User Responsibility</h3>
+<ul>
+  <li>The User is solely responsible for any content uploaded, shared, or generated using the platform, including visual, verbal, or behavioral output of the AI avatar.</li>
+  <li>The User must comply with all applicable laws in their jurisdiction, especially concerning privacy, personal data, and content regulation.</li>
+  <li>The Provider reserves the right to suspend access in case of abuse, illegal use, or violation of ethical guidelines.</li>
+</ul>
+
+<h3>5. Limitation of Liability</h3>
+<p><strong>The Provider is not liable for:</strong></p>
+<ul>
+  <li>Any financial loss, business interruption, or reputational damage resulting from the use or failure of the system.</li>
+  <li>Legal issues arising from misuse of AI-generated voice, image, or behavior.</li>
+  <li>External downtime, including outages caused by cloud, CDN, API, or AI model providers.</li>
+</ul>
+
+<h3>6. Intellectual Property</h3>
+<ul>
+  <li>All AI modules, avatars, models, voice systems, and codebases are proprietary to the Provider or its licensed partners.</li>
+  <li>The User is granted a non-exclusive, non-transferable, and revocable license to use the system strictly for intended and lawful purposes.</li>
+</ul>
+
+<h3>7. Term and Termination</h3>
+<ul>
+  <li>This contract becomes effective upon the User's first interaction with the system.</li>
+  <li>It remains in effect unless explicitly revoked by either party or due to non-compliance with the Terms of Use.</li>
+  <li>The Provider may terminate or suspend access at any time without prior notice.</li>
+</ul>
+
+<h3>8. Governing Law and Jurisdiction</h3>
+<p>This contract is governed by the laws of Canada. Any disputes shall be subject to the jurisdiction of the courts of the Province of Ontario, unless otherwise required by applicable Canadian federal law.</p>
+
+<h3>9. Final Provisions</h3>
+<ul>
+  <li>This agreement may be revised at any time. Users are encouraged to review it regularly.</li>
+  <li>In case of translation discrepancies, the English version shall prevail.</li>
+</ul>
+
+    
+
+    <hr style="margin: 2rem 0;">
+    
+    
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+  // Переключение языка
+  const toggle = document.getElementById('lang-toggle');
+  const es = document.querySelectorAll('.lang-es');
+  const en = document.querySelectorAll('.lang-en');
+  let lang = 'es';
+  toggle.onclick = () => {
+    lang = lang === 'es' ? 'en' : 'es';
+    toggle.innerText = lang.toUpperCase() === 'ES' ? 'EN' : 'ES';
+    es.forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
+    en.forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
+  };
+
+  // Section #hero — ISHAREAI phrases in English
+const phrases = [
+  "Your avatar speaks while you sleep",
+  "Turn visits into conversations, and conversations into clients",
+  "AI now has a face, a voice, and a purpose",
+  "Automate with empathy, respond with precision",
+  "Not just a chatbot — your digital brand ambassador",
+  "Fluent in every language. Real-time. Tireless.",
+  "Build trust in the first seconds with a face that connects",
+  "Smart interface. Instant impact.",
+  "Your brand starts with a voice that listens",
+  "Go beyond online presence — enable emotional connection",
+  "We design your digital frontline: your AI avatar"
+];
+
+
+  let current = 0;
+  const el = document.getElementById("rotating-text");
+
+  setInterval(() => {
+    el.classList.add("fade-out");
+    setTimeout(() => {
+      current = (current + 1) % phrases.length;
+      el.textContent = phrases[current];
+      el.classList.remove("fade-out");
+    }, 600);
+  }, 3500);
+
+  // Section #sec2 — ISHAREAI immersive experience phrases (English)
+const phrasesSec2 = [
+  "Virtual environments",
+  "Interactive walkthroughs",
+  "360° brand experiences",
+  "Augmented reality in action",
+  "Unlimited digital showrooms",
+  "Step inside your brand"
+];
+
+
+  let currentSec2 = 0;
+  const elSec2 = document.getElementById("rotating-text-sec2");
+
+  setInterval(() => {
+    elSec2.classList.add("fade-out");
+    setTimeout(() => {
+      currentSec2 = (currentSec2 + 1) % phrasesSec2.length;
+      elSec2.textContent = phrasesSec2[currentSec2];
+      elSec2.classList.remove("fade-out");
+    }, 600);
+  }, 3500);
+
+
+
+
+ document.addEventListener("DOMContentLoaded", () => {
+  const panel = document.getElementById('side-panel');
+  const closeBtn = document.getElementById('close-panel');
+  const backdrop = document.getElementById('panel-backdrop');
+
+  document.querySelectorAll('.open-panel').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      panel.classList.add('open');
+      backdrop.classList.add('visible');
+      document.body.classList.add('modal-open'); // ⬅️ блокируем фон
+    });
+  });
+
+  function closePanel() {
+    panel.classList.remove('open');
+    backdrop.classList.remove('visible');
+    document.body.classList.remove('modal-open'); // ⬅️ возвращаем прокрутку
+  }
+
+  closeBtn.addEventListener('click', closePanel);
+  backdrop.addEventListener('click', closePanel);
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById('cookie-banner');
+  const modal = document.getElementById('cookie-modal');
+  const overlay = document.getElementById('cookie-overlay');
+
+  const accept = document.getElementById('accept-cookies');
+  const config = document.getElementById('config-cookies');
+  const reject = document.getElementById('reject-cookies');
+
+  const save = document.getElementById('save-settings');
+  const cancel = document.getElementById('cancel-settings');
+
+  // Show banner if not decided yet
+  if (!localStorage.getItem('cookiesDecision')) {
+    banner.classList.add('show');
+  }
+
+  accept.onclick = () => {
+    localStorage.setItem('cookiesDecision', JSON.stringify({
+      necessary: true,
+      analytics: true,
+      ads: true
+    }));
+    banner.classList.remove('show');
+  };
+
+  reject.onclick = () => {
+    localStorage.setItem('cookiesDecision', JSON.stringify({
+      necessary: true,
+      analytics: false,
+      ads: false
+    }));
+    banner.classList.remove('show');
+  };
+
+  config.onclick = () => {
+    modal.classList.add('show');
+    overlay.classList.add('show');
+  };
+
+  cancel.onclick = () => {
+    modal.classList.remove('show');
+    overlay.classList.remove('show');
+  };
+
+  save.onclick = () => {
+    const analytics = document.getElementById('analytics-cookies').checked;
+    const ads = document.getElementById('ads-cookies').checked;
+
+    localStorage.setItem('cookiesDecision', JSON.stringify({
+      necessary: true,
+      analytics: analytics,
+      ads: ads
+    }));
+
+    modal.classList.remove('show');
+    overlay.classList.remove('show');
+    banner.classList.remove('show');
+  };
+});
+
+// Открытие модального окна политики cookies
+document.querySelectorAll('a[href="#politica-cookies"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('cookies-policy-modal').style.display = 'flex';
+  });
+});
+
+// Закрытие окна
+document.getElementById('close-policy-modal').addEventListener('click', () => {
+  document.getElementById('cookies-policy-modal').style.display = 'none';
+});
+
+
+
+
+
+function loadGoogleAnalytics() {
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-QGGREKNJDX';
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QGGREKNJDX');
+}
+
+// Загружаем только если пользователь согласен
+document.addEventListener("DOMContentLoaded", () => {
+  const consent = JSON.parse(localStorage.getItem('cookiesDecision'));
+  if (consent && consent.analytics) {
+    loadGoogleAnalytics();
+  }
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const ofertaLinks = document.querySelectorAll('.open-oferta');
+  const modalOferta = document.getElementById('modal-oferta');
+  const closeOferta = document.getElementById('close-oferta');
+
+  ofertaLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      modalOferta.style.display = 'flex';
+    });
+  });
+
+  closeOferta.addEventListener('click', () => {
+    modalOferta.style.display = 'none';
+  });
+
+  // Закрытие по клику вне окна
+  modalOferta.addEventListener('click', (e) => {
+    if (e.target === modalOferta) {
+      modalOferta.style.display = 'none';
+    }
+  });
+});
+
+function updateStepProgress() {
+  const sections = document.querySelectorAll('.form-section');
+  let completed = 0;
+
+  sections.forEach(section => {
+    const checked = section.querySelectorAll('input[type="checkbox"]:checked').length;
+    if (checked > 0) completed++;
+  });
+
+  const percent = Math.round((completed / sections.length) * 100);
+  document.getElementById('progress-bar').style.width = `${percent}%`;
+  document.getElementById('progress-text').textContent = `${percent}% completed`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateStepProgress();
+
+  document.querySelectorAll('.form-section input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', updateStepProgress);
+  });
+});
+
+
+
+
+ </script>
+
+ <script>
+  const otroCheckbox = document.getElementById('otroCheckbox');
+  const otroInputWrapper = document.getElementById('otroInputWrapper');
+
+  otroCheckbox.addEventListener('change', function () {
+    if (this.checked) {
+      otroInputWrapper.style.display = 'block';
+    } else {
+      otroInputWrapper.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
