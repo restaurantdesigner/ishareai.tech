@@ -1569,27 +1569,31 @@ body.modal-open {
       
       <section id="sec3">
   <div id="seekbeak-container">
-    <iframe
-      src="https://app.seekbeak.com/v/ydjWPL4eq32"
-      frameborder="0"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
 
-    <!-- Тёмная обложка с текстом и кнопкой -->
-    <div id="seekbeak-cover">
+    <!-- Обложка с фоновым изображением -->
+    <div id="seekbeak-cover" style="background-image: url('img/seekbeak-poster.jpg'); background-size: cover; background-position: center;">
       <div class="text-wrapper2">
         <h1 class="hero-title">TAILORED DIGITAL EXPERIENCES</h1>
         <p class="hero-subtitle">
           <span id="rotating-text-sec2" class="fade">Virtual Environments Powered by AI</span>
         </p>
-        <button class="cta-button" onclick="document.getElementById('seekbeak-cover').style.display='none';">
-          ENTER AI SHOWROOM
-        </button>
+        <button class="cta-button" onclick="showSeekBeak()">ENTER AI SHOWROOM</button>
       </div>
     </div>
+
+    <!-- Скрытый SeekBeak iframe -->
+    <div id="seekbeak-frame-wrapper" style="display: none;">
+      <iframe
+        src="https://app.seekbeak.com/v/ydjWPL4eq32"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+
   </div>
 </section>
+
       
        <div class="spacer"></div>
       
@@ -2261,7 +2265,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
+function showSeekBeak() {
+  document.getElementById('seekbeak-cover').style.display = 'none';
+  document.getElementById('seekbeak-frame-wrapper').style.display = 'block';
+}
      
      
      
