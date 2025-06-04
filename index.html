@@ -1580,7 +1580,7 @@ body.modal-open {
   </div>
 </section>
       
-      <div class="spacer"></div>
+       <div class="spacer"></div>
       
       <section id="sec4" style="background: linear-gradient(135deg, #ff98ec, #050ba3); color: #ffffff; position: relative; overflow: hidden;">
   <div class="content" style="position: relative; z-index: 2;">
@@ -1589,10 +1589,6 @@ body.modal-open {
       <p class="hero-subtitle">"AI Interfaces That Talk, React, and Convert"</p>
     </div>
   </div>
-
-  <!-- Аватар под текстом -->
-  <img src="img/2.png" alt="AI Avatar Bubble" class="flying-avatar hidden-before-scroll" />
-</section>
 
 
 
@@ -2227,7 +2223,40 @@ document.addEventListener("DOMContentLoaded", () => {
      
 </script>
 
+<script>
+  const otroCheckbox = document.getElementById('otroCheckbox');
+  const otroInputWrapper = document.getElementById('otroInputWrapper');
 
+  otroCheckbox.addEventListener('change', function () {
+    if (this.checked) {
+      otroInputWrapper.style.display = 'block';
+    } else {
+      otroInputWrapper.style.display = 'none';
+    }
+  });
+     
+     
+document.addEventListener('DOMContentLoaded', () => {
+  const blocks = document.querySelectorAll('.icon-block');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  blocks.forEach(block => observer.observe(block));
+});
+
+
+
+     
+     
+     
+     
+     
+</script>
 
 
 
