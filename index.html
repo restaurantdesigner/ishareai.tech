@@ -183,12 +183,7 @@ form textarea:hover {
       border-radius: 4px;
       cursor: pointer;
     }
-    .footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+    
     #lang-toggle {
       position: fixed;
       top: 10px;
@@ -201,18 +196,33 @@ form textarea:hover {
       z-index: 10;
     }
 
-header, footer {
+header {
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, #ff98ec, #050ba3, 0.5) 
   padding: 10px 20px;
   z-index: 999;
   backdrop-filter: blur(10px);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(45deg, #ff98ec, #050ba3);
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  z-index: 999;
+  font-family: 'Lato', sans-serif;
+}
+
 
 header {
   top: 0;
@@ -1319,20 +1329,8 @@ body.modal-open {
     min-height: 35vh;
   }
 }
- .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(45deg, #ff98ec, #050ba3);
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-  z-index: 999;
-  font-family: 'Lato', sans-serif;
-}
-     
-     #seekbeak-cover {
+ 
+    #seekbeak-cover {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
@@ -1347,9 +1345,9 @@ body.modal-open {
   padding: 20px;
   box-sizing: border-box;
 }
+ 
+     
 
-
-  
 
   </style>
 
@@ -2223,48 +2221,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
      
      
-document.addEventListener("DOMContentLoaded", () => {
-  const avatar = document.querySelector('.flying-avatar');
-
-  if (!avatar) return;
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          avatar.classList.add('visible');
-          observer.unobserve(entry.target); // Один раз
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  observer.observe(avatar);
-});
-
-
-
-     
-     
-     
-     
-     
-</script>
-
-<script>
-  const otroCheckbox = document.getElementById('otroCheckbox');
-  const otroInputWrapper = document.getElementById('otroInputWrapper');
-
-  otroCheckbox.addEventListener('change', function () {
-    if (this.checked) {
-      otroInputWrapper.style.display = 'block';
-    } else {
-      otroInputWrapper.style.display = 'none';
-    }
-  });
-     
-     
 document.addEventListener('DOMContentLoaded', () => {
   const blocks = document.querySelectorAll('.icon-block');
   const observer = new IntersectionObserver(entries => {
@@ -2283,6 +2239,7 @@ function showSeekBeak() {
   document.getElementById('seekbeak-cover').style.display = 'none';
   document.getElementById('seekbeak-frame-wrapper').style.display = 'block';
 }
+
      
      
      
